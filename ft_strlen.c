@@ -6,13 +6,15 @@
 /*   By: tbaghdas <tbaghdas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 17:21:45 by tbaghdas          #+#    #+#             */
-/*   Updated: 2025/01/12 17:43:05 by tbaghdas         ###   ########.fr       */
+/*   Updated: 2025/01/23 22:46:04 by tbaghdas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include "libft.h"
+
+unsigned long	ft_strlen(const char *str)
 {
-	int	i;
+	unsigned long	i;
 
 	if (!str)
 		return (0);
