@@ -6,13 +6,13 @@
 /*   By: tbaghdas <tbaghdas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 22:52:50 by tbaghdas          #+#    #+#             */
-/*   Updated: 2025/01/23 23:44:19 by tbaghdas         ###   ########.fr       */
+/*   Updated: 2025/01/24 21:22:07 by tbaghdas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *ptr, int value, unsigned long num)
+void	*ft_memset(void *ptr, int value, size_t num)
 {
 	if (ptr)
 	{
