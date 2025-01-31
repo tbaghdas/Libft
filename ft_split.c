@@ -6,11 +6,11 @@
 /*   By: btigran <btigran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 17:06:58 by btigran           #+#    #+#             */
-/*   Updated: 2025/01/31 20:34:57 by btigran          ###   ########.fr       */
+/*   Updated: 2025/01/31 21:19:15 by btigran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
  header y
 static int	words_count(char const *s, char c)
 {
