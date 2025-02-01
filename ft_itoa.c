@@ -3,15 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: btigran <btigran@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tbaghdas <tbaghdas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/31 20:47:12 by btigran           #+#    #+#             */
-/*   Updated: 2025/01/31 21:37:48 by btigran          ###   ########.fr       */
+/*   Created: 2025/01/31 20:47:12 by tbaghdas          #+#    #+#             */
+/*   Updated: 2025/02/01 18:44:20 by tbaghdas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+
+static void	write_str(char *str, long nb, int count)
+{
+	str[count--] = '\0';
+	if (nb < 0)
+	{
+		str[0] = '-';
+		nb *= -1;
+	}
+	while (nb / 10)
+	{
+		str[count--] = nb % 10 + '0';
+		nb /= 10;
+	}
+	str[count] = nb + '0';
+}
+
 char	*ft_itoa(int n)
 {
 	int		count;
@@ -30,25 +46,14 @@ char	*ft_itoa(int n)
 	str = (char *) malloc(count-- * sizeof(char));
 	if (!str)
 		return (NULL);
-	str[count--] = '\0';
-	if (nb < 0)
-	{
-		str[0] = '-';
-		nb *= -1;
-	}
-	while (nb / 10)
-	{
-		str[count--] = nb % 10 + '0';
-		nb /= 10;
-	}
-	str[count] = nb;
+	write_str(str, nb, count);
 	return (str);
 }
-
-
+/*
+#include <stdio.h>
 int main()
 {
 	int u;
 	scanf("%d", &u);
 	printf("%s\n%d\n", ft_itoa(u), u);
-}
+}*/

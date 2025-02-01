@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: btigran <btigran@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tbaghdas <tbaghdas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/30 17:06:58 by btigran           #+#    #+#             */
-/*   Updated: 2025/01/31 21:19:15 by btigran          ###   ########.fr       */
+/*   Created: 2025/01/30 17:06:58 by tbaghdas          #+#    #+#             */
+/*   Updated: 2025/02/01 16:23:56 by tbaghdas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
- header y
+
 static int	words_count(char const *s, char c)
 {
 	char	flag;
@@ -73,7 +73,7 @@ static char	**gen_strs(char **strs, char const *s, char c, int *arr)
 		}
 		strs[arr[1]][k++] = s[i++];
 	}
-	strs[++arr[1]] = '\0';
+	strs[++arr[1]] = NULL;
 	return (strs);
 }
 
@@ -94,7 +94,7 @@ char	**ft_split(char const *s, char c)
 	strs = gen_strs(strs, s, c, arr);
 	return (strs);
 }
-/*
+
 #include <stdio.h>
 
 int	main(int c, char **a)
@@ -104,4 +104,4 @@ int	main(int c, char **a)
 	for(int i = 0;j[i];i++){
 		printf("%s\n", j[i]);
 	}
-}*/
+}
