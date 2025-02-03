@@ -6,13 +6,13 @@
 /*   By: tbaghdas <tbaghdas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 22:32:54 by tbaghdas          #+#    #+#             */
-/*   Updated: 2025/02/01 22:43:14 by tbaghdas         ###   ########.fr       */
+/*   Updated: 2025/02/03 21:05:26 by tbaghdas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	char	*last;
 	char	*loc;

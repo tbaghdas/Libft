@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbaghdas <tbaghdas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/01 22:11:11 by tbaghdas          #+#    #+#             */
-/*   Updated: 2025/02/03 21:04:27 by tbaghdas         ###   ########.fr       */
+/*   Created: 2025/02/03 22:46:11 by tbaghdas          #+#    #+#             */
+/*   Updated: 2025/02/03 22:48:34 by tbaghdas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int c)
+t_list	*ft_lstlast(t_list *lst)
 {
-	if (c > 64 && c < 91)
-		c += 32;
-	return (c);
+	if (!lst)
+		return (NULL);
+	while (lst -> next)
+		lst = lst -> next;
+	return (lst);
 }

@@ -1,20 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbaghdas <tbaghdas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/01 22:11:11 by tbaghdas          #+#    #+#             */
-/*   Updated: 2025/02/03 21:04:27 by tbaghdas         ###   ########.fr       */
+/*   Created: 2025/02/03 21:11:19 by tbaghdas          #+#    #+#             */
+/*   Updated: 2025/02/03 21:20:37 by tbaghdas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int c)
+char	*ft_strdup(const char *src)
 {
-	if (c > 64 && c < 91)
-		c += 32;
-	return (c);
+	int		i;
+	int		size;
+	char	*s;
+
+	if (!src)
+		return (NULL);
+	size = 0;
+	i = 0;
+	while (src[i++])
+		size++;
+	s = (char *) malloc(size + 1);
+	if (s == NULL)
+		return (NULL);
+	i = -1;
+	while (src[++i])
+		i[s] = i[src];
+	i[s] = '\0';
+	return (s);
 }
+/*
+#include <stdio.h>
+#include <string.h>
+
+int	main(int c, char *v[])
+{
+	printf("%d  : %s\n%s\n", c, ft_strdup(v[1]), strdup(v[1]));
+}
+*/

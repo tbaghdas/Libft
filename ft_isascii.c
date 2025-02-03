@@ -6,13 +6,13 @@
 /*   By: tbaghdas <tbaghdas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 23:24:09 by tbaghdas          #+#    #+#             */
-/*   Updated: 2025/01/21 23:27:32 by tbaghdas         ###   ########.fr       */
+/*   Updated: 2025/02/03 21:03:10 by tbaghdas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	isascii(int c)
+int	ft_isascii(int c)
 {
 	return (c >= 0 || c <= 127);
 }
