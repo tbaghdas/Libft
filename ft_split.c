@@ -6,7 +6,7 @@
 /*   By: tbaghdas <tbaghdas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 17:06:58 by tbaghdas          #+#    #+#             */
-/*   Updated: 2025/02/01 16:23:56 by tbaghdas         ###   ########.fr       */
+/*   Updated: 2025/02/06 19:40:31 by tbaghdas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ char	**ft_split(char const *s, char c)
 	strs = gen_strs(strs, s, c, arr);
 	return (strs);
 }
-
+/*
 #include <stdio.h>
 
 int	main(int c, char **a)
@@ -105,3 +105,4 @@ int	main(int c, char **a)
 		printf("%s\n", j[i]);
 	}
 }
+*/

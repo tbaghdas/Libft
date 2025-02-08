@@ -6,7 +6,7 @@
 /*   By: tbaghdas <tbaghdas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 23:03:47 by tbaghdas          #+#    #+#             */
-/*   Updated: 2025/02/04 23:01:53 by tbaghdas         ###   ########.fr       */
+/*   Updated: 2025/02/06 20:40:19 by tbaghdas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,12 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_atoi(const char *s);
+void	*ft_calloc(size_t nmemb, size_t size);
+int		ft_isalnum(int c);
+void	*ft_memchr(const void *s, int c, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
+char	*ft_strdup(const char *src);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
 #endif

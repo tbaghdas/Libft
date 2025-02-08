@@ -6,7 +6,7 @@
 /*   By: tbaghdas <tbaghdas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 22:21:28 by tbaghdas          #+#    #+#             */
-/*   Updated: 2025/02/03 22:28:00 by tbaghdas         ###   ########.fr       */
+/*   Updated: 2025/02/06 19:30:02 by tbaghdas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (!new)
+	if (!lst || !*lst || !new)
 		return ;
-	new -> next = lst;
-	lst = new;
+	new -> next = *lst;
+	*lst = new;
 }

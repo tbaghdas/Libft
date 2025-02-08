@@ -6,7 +6,7 @@
 /*   By: tbaghdas <tbaghdas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 23:03:01 by tbaghdas          #+#    #+#             */
-/*   Updated: 2025/02/03 23:07:30 by tbaghdas         ###   ########.fr       */
+/*   Updated: 2025/02/06 19:51:14 by tbaghdas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	if (!lst || !new)
+	t_list	*temp;
+
+	if (!lst || !*lst || !new)
 		return ;
-	while (*lst -> next)
-		*lst = *lst -> next;
-	*lst -> next = new;
+	temp = *lst;
+	while (temp -> next)
+		temp = temp -> next;
+	temp -> next = new;
 }

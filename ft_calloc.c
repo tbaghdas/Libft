@@ -6,13 +6,13 @@
 /*   By: tbaghdas <tbaghdas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 21:08:24 by tbaghdas          #+#    #+#             */
-/*   Updated: 2025/02/03 21:08:25 by tbaghdas         ###   ########.fr       */
+/*   Updated: 2025/02/06 20:33:09 by tbaghdas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*mem;
 	size_t	len;

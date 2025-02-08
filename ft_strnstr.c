@@ -6,7 +6,7 @@
 /*   By: tbaghdas <tbaghdas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 21:07:19 by tbaghdas          #+#    #+#             */
-/*   Updated: 2025/02/04 23:00:14 by tbaghdas         ###   ########.fr       */
+/*   Updated: 2025/02/08 18:01:04 by tbaghdas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
 	size_t	len_needle;
+	size_t	tmp;
 
 	if (!haystack || !needle)
 		return (NULL);
@@ -27,14 +28,19 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	{
 		while (haystack[i] != needle[0] && haystack[i] && i < len)
 			i++;
-		if (len - i >= len_needle)
-		{
-			if (!ft_strncmp(&haystack[i], needle, len - i))
-				return ((char *)&haystack[i]);
-		}
-		else
+		if (len - i + 1 < len_needle)
 			return (NULL);
+		tmp = len_needle;
+		if (len_needle > len - i)
+			tmp = len - i;
+		if (!ft_strncmp(&haystack[i], needle, tmp))
+			return ((char *)&haystack[i]);
 		i++;
 	}
 	return (NULL);
 }
+/*
+int main()
+{
+	printf("%s\n", ft_strnstr("lorem ipsum dolor sit amet", "ipsum", 15));
+}*/
