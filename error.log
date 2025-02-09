@@ -1,0 +1,350 @@
+For ft_strchr, in /Users/mabaghda/francinette/tests/libft/fsoares/test_strchr.c:
+
+Error in test 5: ft_strchr(0x1057bda40: "teste", 357: 'e'): expected: 0x1057bda41, yours: 0x0
+Error in test 6: ft_strchr(0x1057bda40: "teste", 1024: '\0'): expected: 0x1057bda45, yours: 0x0
+
+For ft_strrchr, in /Users/mabaghda/francinette/tests/libft/fsoares/test_strrchr.c:
+
+Error in test 5: ft_strrchr(0x1030f69a0: "teste", 1125: 'e'): expected: 0x1030f69a4, yours: 0x0
+Error in test 6: ft_strrchr(0x1030f69a0: "teste", 1024: '\0'): expected: 0x1030f69a5, yours: 0x0
+
+For ft_memchr, in /Users/mabaghda/francinette/tests/libft/fsoares/test_memchr.c:
+
+Error in test 2: ft_memchr(0x7ffee44d4700, 187(bb): '\273', 39): expected: 0x7ffee44d4724, yours: 0x0
+Memory content:
+at 0x0x7ffee44d4700: a96d f91d 8e91 4252 0976 3231 a5a4 4af4 ->  .m....BR.v21..J.
+at 0x0x7ffee44d4710: cb4d ecf2 ee80 f3f4 b1e0 46a8 c661 1c82 ->  .M........F..a..
+at 0x0x7ffee44d4720: 09ac f54f bb54 39a3 b273 929d a28b d12a ->  ...O.T9..s.....*
+
+
+For ft_memcmp, in /Users/mabaghda/francinette/tests/libft/fsoares/test_memcmp.c:
+
+Error in test 9: ft_memcmp("abc", "abc", 7): 
+expected sign: -1 (value: -19), yours sign: 0 (value: 0)
+
+You are stoping at the '\0'
+
+For ft_strnstr, in /Users/mabaghda/francinette/tests/libft/fsoares/test_strnstr.c:
+
+Error in test 12: ft_strnstr(0x107d62820: "abcdefgh", "abc", 2): expected: 0x0, yours: 0x107d62820
+Error in test 21: ft_strnstr(0x107d628a0: "aaxx", "xx", 3): expected: 0x0, yours: 0x107d628a2
+
+For ft_atoi, in /Users/mabaghda/francinette/tests/libft/fsoares/test_atoi.c:
+
+Error in test 19: atoi("\001 2"): expected: 0, yours: 2
+Error in test 20: atoi("\002 3"): expected: 0, yours: 3
+Error in test 21: atoi("\003 4"): expected: 0, yours: 4
+Error in test 22: atoi("\004 5"): expected: 0, yours: 5
+Error in test 23: atoi("\005 6"): expected: 0, yours: 6
+Error in test 24: atoi("\006 7"): expected: 0, yours: 7
+Error in test 25: atoi("\007 8"): expected: 0, yours: 8
+Error in test 26: atoi("\010 9"): expected: 0, yours: 9
+Error in test 32: atoi("\016 15"): expected: 0, yours: 15
+Error in test 33: atoi("\017 16"): expected: 0, yours: 16
+Error in test 34: atoi("\020 17"): expected: 0, yours: 17
+Error in test 35: atoi("\021 18"): expected: 0, yours: 18
+Error in test 36: atoi("\022 19"): expected: 0, yours: 19
+Error in test 37: atoi("\023 20"): expected: 0, yours: 20
+Error in test 38: atoi("\024 21"): expected: 0, yours: 21
+Error in test 39: atoi("\025 22"): expected: 0, yours: 22
+Error in test 40: atoi("\026 23"): expected: 0, yours: 23
+Error in test 41: atoi("\027 24"): expected: 0, yours: 24
+Error in test 42: atoi("\030 25"): expected: 0, yours: 25
+Error in test 43: atoi("\031 26"): expected: 0, yours: 26
+Error in test 44: atoi("\032 27"): expected: 0, yours: 27
+Error in test 45: atoi("\033 28"): expected: 0, yours: 28
+Error in test 46: atoi("\034 29"): expected: 0, yours: 29
+Error in test 47: atoi("\035 30"): expected: 0, yours: 30
+Error in test 48: atoi("\036 31"): expected: 0, yours: 31
+Error in test 49: atoi("\037 32"): expected: 0, yours: 32
+Error in test 146: atoi("\200 129"): expected: 0, yours: 129
+Error in test 147: atoi("\201 130"): expected: 0, yours: 130
+Error in test 148: atoi("\202 131"): expected: 0, yours: 131
+Error in test 149: atoi("\203 132"): expected: 0, yours: 132
+Error in test 150: atoi("\204 133"): expected: 0, yours: 133
+Error in test 151: atoi("\205 134"): expected: 0, yours: 134
+Error in test 152: atoi("\206 135"): expected: 0, yours: 135
+Error in test 153: atoi("\207 136"): expected: 0, yours: 136
+Error in test 154: atoi("\210 137"): expected: 0, yours: 137
+Error in test 155: atoi("\211 138"): expected: 0, yours: 138
+Error in test 156: atoi("\212 139"): expected: 0, yours: 139
+Error in test 157: atoi("\213 140"): expected: 0, yours: 140
+Error in test 158: atoi("\214 141"): expected: 0, yours: 141
+Error in test 159: atoi("\215 142"): expected: 0, yours: 142
+Error in test 160: atoi("\216 143"): expected: 0, yours: 143
+Error in test 161: atoi("\217 144"): expected: 0, yours: 144
+Error in test 162: atoi("\220 145"): expected: 0, yours: 145
+Error in test 163: atoi("\221 146"): expected: 0, yours: 146
+Error in test 164: atoi("\222 147"): expected: 0, yours: 147
+Error in test 165: atoi("\223 148"): expected: 0, yours: 148
+Error in test 166: atoi("\224 149"): expected: 0, yours: 149
+Error in test 167: atoi("\225 150"): expected: 0, yours: 150
+Error in test 168: atoi("\226 151"): expected: 0, yours: 151
+Error in test 169: atoi("\227 152"): expected: 0, yours: 152
+Error in test 170: atoi("\230 153"): expected: 0, yours: 153
+Error in test 171: atoi("\231 154"): expected: 0, yours: 154
+Error in test 172: atoi("\232 155"): expected: 0, yours: 155
+Error in test 173: atoi("\233 156"): expected: 0, yours: 156
+Error in test 174: atoi("\234 157"): expected: 0, yours: 157
+Error in test 175: atoi("\235 158"): expected: 0, yours: 158
+Error in test 176: atoi("\236 159"): expected: 0, yours: 159
+Error in test 177: atoi("\237 160"): expected: 0, yours: 160
+Error in test 178: atoi("\240 161"): expected: 0, yours: 161
+Error in test 179: atoi("\241 162"): expected: 0, yours: 162
+Error in test 180: atoi("\242 163"): expected: 0, yours: 163
+Error in test 181: atoi("\243 164"): expected: 0, yours: 164
+Error in test 182: atoi("\244 165"): expected: 0, yours: 165
+Error in test 183: atoi("\245 166"): expected: 0, yours: 166
+Error in test 184: atoi("\246 167"): expected: 0, yours: 167
+Error in test 185: atoi("\247 168"): expected: 0, yours: 168
+Error in test 186: atoi("\250 169"): expected: 0, yours: 169
+Error in test 187: atoi("\251 170"): expected: 0, yours: 170
+Error in test 188: atoi("\252 171"): expected: 0, yours: 171
+Error in test 189: atoi("\253 172"): expected: 0, yours: 172
+Error in test 190: atoi("\254 173"): expected: 0, yours: 173
+Error in test 191: atoi("\255 174"): expected: 0, yours: 174
+Error in test 192: atoi("\256 175"): expected: 0, yours: 175
+Error in test 193: atoi("\257 176"): expected: 0, yours: 176
+Error in test 194: atoi("\260 177"): expected: 0, yours: 177
+Error in test 195: atoi("\261 178"): expected: 0, yours: 178
+Error in test 196: atoi("\262 179"): expected: 0, yours: 179
+Error in test 197: atoi("\263 180"): expected: 0, yours: 180
+Error in test 198: atoi("\264 181"): expected: 0, yours: 181
+Error in test 199: atoi("\265 182"): expected: 0, yours: 182
+Error in test 200: atoi("\266 183"): expected: 0, yours: 183
+Error in test 201: atoi("\267 184"): expected: 0, yours: 184
+Error in test 202: atoi("\270 185"): expected: 0, yours: 185
+Error in test 203: atoi("\271 186"): expected: 0, yours: 186
+Error in test 204: atoi("\272 187"): expected: 0, yours: 187
+Error in test 205: atoi("\273 188"): expected: 0, yours: 188
+Error in test 206: atoi("\274 189"): expected: 0, yours: 189
+Error in test 207: atoi("\275 190"): expected: 0, yours: 190
+Error in test 208: atoi("\276 191"): expected: 0, yours: 191
+Error in test 209: atoi("\277 192"): expected: 0, yours: 192
+Error in test 210: atoi("\300 193"): expected: 0, yours: 193
+Error in test 211: atoi("\301 194"): expected: 0, yours: 194
+Error in test 212: atoi("\302 195"): expected: 0, yours: 195
+Error in test 213: atoi("\303 196"): expected: 0, yours: 196
+Error in test 214: atoi("\304 197"): expected: 0, yours: 197
+Error in test 215: atoi("\305 198"): expected: 0, yours: 198
+Error in test 216: atoi("\306 199"): expected: 0, yours: 199
+Error in test 217: atoi("\307 200"): expected: 0, yours: 200
+Error in test 218: atoi("\310 201"): expected: 0, yours: 201
+Error in test 219: atoi("\311 202"): expected: 0, yours: 202
+Error in test 220: atoi("\312 203"): expected: 0, yours: 203
+Error in test 221: atoi("\313 204"): expected: 0, yours: 204
+Error in test 222: atoi("\314 205"): expected: 0, yours: 205
+Error in test 223: atoi("\315 206"): expected: 0, yours: 206
+Error in test 224: atoi("\316 207"): expected: 0, yours: 207
+Error in test 225: atoi("\317 208"): expected: 0, yours: 208
+Error in test 226: atoi("\320 209"): expected: 0, yours: 209
+Error in test 227: atoi("\321 210"): expected: 0, yours: 210
+Error in test 228: atoi("\322 211"): expected: 0, yours: 211
+Error in test 229: atoi("\323 212"): expected: 0, yours: 212
+Error in test 230: atoi("\324 213"): expected: 0, yours: 213
+Error in test 231: atoi("\325 214"): expected: 0, yours: 214
+Error in test 232: atoi("\326 215"): expected: 0, yours: 215
+Error in test 233: atoi("\327 216"): expected: 0, yours: 216
+Error in test 234: atoi("\330 217"): expected: 0, yours: 217
+Error in test 235: atoi("\331 218"): expected: 0, yours: 218
+Error in test 236: atoi("\332 219"): expected: 0, yours: 219
+Error in test 237: atoi("\333 220"): expected: 0, yours: 220
+Error in test 238: atoi("\334 221"): expected: 0, yours: 221
+Error in test 239: atoi("\335 222"): expected: 0, yours: 222
+Error in test 240: atoi("\336 223"): expected: 0, yours: 223
+Error in test 241: atoi("\337 224"): expected: 0, yours: 224
+Error in test 242: atoi("\340 225"): expected: 0, yours: 225
+Error in test 243: atoi("\341 226"): expected: 0, yours: 226
+Error in test 244: atoi("\342 227"): expected: 0, yours: 227
+Error in test 245: atoi("\343 228"): expected: 0, yours: 228
+Error in test 246: atoi("\344 229"): expected: 0, yours: 229
+Error in test 247: atoi("\345 230"): expected: 0, yours: 230
+Error in test 248: atoi("\346 231"): expected: 0, yours: 231
+Error in test 249: atoi("\347 232"): expected: 0, yours: 232
+Error in test 250: atoi("\350 233"): expected: 0, yours: 233
+Error in test 251: atoi("\351 234"): expected: 0, yours: 234
+Error in test 252: atoi("\352 235"): expected: 0, yours: 235
+Error in test 253: atoi("\353 236"): expected: 0, yours: 236
+Error in test 254: atoi("\354 237"): expected: 0, yours: 237
+Error in test 255: atoi("\355 238"): expected: 0, yours: 238
+Error in test 256: atoi("\356 239"): expected: 0, yours: 239
+Error in test 257: atoi("\357 240"): expected: 0, yours: 240
+Error in test 258: atoi("\360 241"): expected: 0, yours: 241
+Error in test 259: atoi("\361 242"): expected: 0, yours: 242
+Error in test 260: atoi("\362 243"): expected: 0, yours: 243
+Error in test 261: atoi("\363 244"): expected: 0, yours: 244
+Error in test 262: atoi("\364 245"): expected: 0, yours: 245
+Error in test 263: atoi("\365 246"): expected: 0, yours: 246
+Error in test 264: atoi("\366 247"): expected: 0, yours: 247
+Error in test 265: atoi("\367 248"): expected: 0, yours: 248
+Error in test 266: atoi("\370 249"): expected: 0, yours: 249
+Error in test 267: atoi("\371 250"): expected: 0, yours: 250
+Error in test 268: atoi("\372 251"): expected: 0, yours: 251
+Error in test 269: atoi("\373 252"): expected: 0, yours: 252
+Error in test 270: atoi("\374 253"): expected: 0, yours: 253
+Error in test 271: atoi("\375 254"): expected: 0, yours: 254
+Error in test 272: atoi("\376 255"): expected: 0, yours: 255
+Error in test 273: atoi("\377 256"): expected: 0, yours: 256
+
+For ft_substr, in /Users/mabaghda/francinette/tests/libft/fsoares/test_substr.c:
+
+Error in test 1: ft_substr("", 0, 0): expected: "", got: <NULL>
+Error in test 1: ft_substr("", 0, 0): not enough memory allocated, needed: 1, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+Error in test 2: ft_substr("", 0, 1): expected: "", got: <NULL>
+Error in test 2: ft_substr("", 0, 1): not enough memory allocated, needed: 1, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+Error in test 3: ft_substr("", 1, 1): expected: "", got: <NULL>
+Error in test 3: ft_substr("", 1, 1): not enough memory allocated, needed: 1, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+Error in test 4: ft_substr("hola", 4294967295, 0): Memory problems!
+     in sigabort utils.c:58:1
+     in malloc malloc_mock.c:65:8
+  -> in ft_substr ft_substr.c:28:8
+     in test_single_substr test_substr.c:7:2
+     in test_substr test_substr.c:16:8
+     in main test_substr.c:43:2
+
+=================================================================
+==64626==ERROR: AddressSanitizer: requested allocation size 0xffffffff00000006 (0xffffffff00001008 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
+    #0 0x108e32793 in wrap_malloc (libclang_rt.asan_osx_dynamic.dylib:x86_64h+0x61793)
+    #1 0x10581cf8c in malloc malloc_mock.c:65
+    #2 0x105822e00 in ft_substr ft_substr.c:28
+    #3 0x10581c68f in test_single_substr test_substr.c:7
+    #4 0x10581c839 in test_substr test_substr.c:16
+    #5 0x10581ce5d in main test_substr.c:43
+    #6 0x7fff596333d4 in start (libdyld.dylib:x86_64+0x163d4)
+
+==64626==HINT: if you don't care about these errors you may set allocator_may_return_null=1
+SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:x86_64h+0x61793) in wrap_malloc
+
+For ft_strtrim, in /Users/mabaghda/francinette/tests/libft/fsoares/test_strtrim.c:
+
+Error in test 2: ft_strtrim("abcd", ""): Memory problems!
+     in sigabort utils.c:58:1
+     in escape_str utils.c:234:18
+     in same_string utils.c:439:10
+     in single_test_strtrim test_strtrim.c:7:2
+     in test_strtrim test_strtrim.c:13:8
+     in main test_strtrim.c:26:2
+
+=================================================================
+==64629==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000135 at pc 0x000104f155ae bp 0x7ffeee2b56f0 sp 0x7ffeee2b4e98
+READ of size 6 at 0x602000000135 thread T0
+    #0 0x104f155ad in wrap_strlen (libclang_rt.asan_osx_dynamic.dylib:x86_64h+0x185ad)
+    #1 0x101950967 in escape_str utils.c:234
+    #2 0x10195256c in same_string utils.c:439
+    #3 0x10194c537 in single_test_strtrim test_strtrim.c:7
+    #4 0x10194c5ff in test_strtrim test_strtrim.c:13
+    #5 0x10194c88d in main test_strtrim.c:26
+    #6 0x7fff596333d4 in start (libdyld.dylib:x86_64+0x163d4)
+
+0x602000000135 is located 0 bytes to the right of 5-byte region [0x602000000130,0x602000000135)
+allocated by thread T0 here:
+    #0 0x104f5e793 in wrap_malloc (libclang_rt.asan_osx_dynamic.dylib:x86_64h+0x61793)
+    #1 0x10194c9bc in malloc malloc_mock.c:65
+    #2 0x10195290d in ft_strtrim ft_strtrim.c:80
+    #3 0x10194c526 in single_test_strtrim test_strtrim.c:7
+    #4 0x10194c5ff in test_strtrim test_strtrim.c:13
+    #5 0x10194c88d in main test_strtrim.c:26
+    #6 0x7fff596333d4 in start (libdyld.dylib:x86_64+0x163d4)
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow (libclang_rt.asan_osx_dynamic.dylib:x86_64h+0x185ad) in wrap_strlen
+
+For ft_split, in /Users/mabaghda/francinette/tests/libft/fsoares/test_split.c:
+
+
+Error in test 1: ft_split("hello!", 32:' '): 
+Expected: ["hello!",  NULL]
+Returned: [Error in test 1: ft_split("hello!", 32:' '): Memory problems!
+     in sigabort utils.c:58:1
+     in escape_str utils.c:234:18
+     in print_string_arr test_split.c:24:32
+     in same_strings test_split.c:48:3
+     in test_single_split test_split.c:62:9
+     in test_split test_split.c:79:6
+     in main test_split.c:101:2
+
+=================================================================
+==64631==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000137 at pc 0x00010d5225ae bp 0x7ffee5ca6640 sp 0x7ffee5ca5de8
+READ of size 8 at 0x602000000137 thread T0
+    #0 0x10d5225ad in wrap_strlen (libclang_rt.asan_osx_dynamic.dylib:x86_64h+0x185ad)
+    #1 0x109f60097 in escape_str utils.c:234
+    #2 0x109f5b6a6 in print_string_arr test_split.c:24
+    #3 0x109f5b9e7 in same_strings test_split.c:48
+    #4 0x109f5bb03 in test_single_split test_split.c:62
+    #5 0x109f5bcec in test_split test_split.c:79
+    #6 0x109f5bfbd in main test_split.c:101
+    #7 0x7fff596333d4 in start (libdyld.dylib:x86_64+0x163d4)
+
+0x602000000137 is located 0 bytes to the right of 7-byte region [0x602000000130,0x602000000137)
+allocated by thread T0 here:
+    #0 0x10d56b793 in wrap_malloc (libclang_rt.asan_osx_dynamic.dylib:x86_64h+0x61793)
+    #1 0x109f5c0ec in malloc malloc_mock.c:65
+    #2 0x109f6286f in gen_strs ft_split.c:69
+    #3 0x109f620f6 in ft_split ft_split.c:94
+    #4 0x109f5baeb in test_single_split test_split.c:59
+    #5 0x109f5bcec in test_split test_split.c:79
+    #6 0x109f5bfbd in main test_split.c:101
+    #7 0x7fff596333d4 in start (libdyld.dylib:x86_64+0x163d4)
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow (libclang_rt.asan_osx_dynamic.dylib:x86_64h+0x185ad) in wrap_strlen
+
+For ft_putnbr_fd, in /Users/mabaghda/francinette/tests/libft/fsoares/test_putnbr_fd.c:
+
+Error in test 1: ft_putnbr_fd(0, fd: 4): 
+Memory leak: 0x602000000110 - 2 bytes
+You failed to free the memory allocated at:
+     in _add_malloc malloc_mock.c:29:8
+     in malloc malloc_mock.c:75:10
+  -> in ft_itoa ft_itoa.c:46:6
+     in ft_putnbr_fd ft_putnbr_fd.c:17:27
+     in single_test_putnbr test_putnbr_fd.c:9:20
+     in test_putnbr_fd test_putnbr_fd.c:17:6
+     in main test_putnbr_fd.c:42:2
+
+Error in test 2: ft_putnbr_fd(10000043, fd: 4): 
+Memory leak: 0x602000000130 - 9 bytes
+You failed to free the memory allocated at:
+     in _add_malloc malloc_mock.c:29:8
+     in malloc malloc_mock.c:75:10
+  -> in ft_itoa ft_itoa.c:46:6
+     in ft_putnbr_fd ft_putnbr_fd.c:17:27
+     in single_test_putnbr test_putnbr_fd.c:9:20
+     in test_putnbr_fd test_putnbr_fd.c:18:8
+     in main test_putnbr_fd.c:42:2
+
+Error in test 3: ft_putnbr_fd(-10000043, fd: 4): 
+Memory leak: 0x602000000150 - 10 bytes
+You failed to free the memory allocated at:
+     in _add_malloc malloc_mock.c:29:8
+     in malloc malloc_mock.c:75:10
+  -> in ft_itoa ft_itoa.c:46:6
+     in ft_putnbr_fd ft_putnbr_fd.c:17:27
+     in single_test_putnbr test_putnbr_fd.c:9:20
+     in test_putnbr_fd test_putnbr_fd.c:19:8
+     in main test_putnbr_fd.c:42:2
+
+Error in test 4: ft_putnbr_fd(2147483647, fd: 4): 
+Memory leak: 0x602000000170 - 11 bytes
+You failed to free the memory allocated at:
+     in _add_malloc malloc_mock.c:29:8
+     in malloc malloc_mock.c:75:10
+  -> in ft_itoa ft_itoa.c:46:6
+     in ft_putnbr_fd ft_putnbr_fd.c:17:27
+     in single_test_putnbr test_putnbr_fd.c:9:20
+     in test_putnbr_fd test_putnbr_fd.c:20:8
+     in main test_putnbr_fd.c:42:2
+
+Error in test 5: ft_putnbr_fd(-2147483648, fd: 4): 
+Memory leak: 0x602000000190 - 12 bytes
+You failed to free the memory allocated at:
+     in _add_malloc malloc_mock.c:29:8
+     in malloc malloc_mock.c:75:10
+  -> in ft_itoa ft_itoa.c:46:6
+     in ft_putnbr_fd ft_putnbr_fd.c:17:27
+     in single_test_putnbr test_putnbr_fd.c:9:20
+     in test_putnbr_fd test_putnbr_fd.c:21:8
+     in main test_putnbr_fd.c:42:2
+
+
