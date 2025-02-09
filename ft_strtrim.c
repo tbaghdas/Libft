@@ -6,7 +6,7 @@
 /*   By: tbaghdas <tbaghdas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 22:35:16 by tbaghdas          #+#    #+#             */
-/*   Updated: 2025/02/09 16:55:54 by tbaghdas         ###   ########.fr       */
+/*   Updated: 2025/02/09 17:51:30 by tbaghdas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	while (start_count < len - end_count)
 		str[i++] = s1[start_count++];
+	str[i] = '\0';
 	return (str);
 }
 /*
@@ -91,5 +92,5 @@ char	*ft_strtrim(char const *s1, char const *set)
 int main(int t, char *u[])
 {
 	t++;
-	printf("%s\n", ft_strtrim(u[1], u[2]));
+	printf("%s\n", ft_strtrim("lorem \n ipsum \t dolor \n sit \t amet", " "));
 }*/
