@@ -6,7 +6,7 @@
 /*   By: tbaghdas <tbaghdas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 23:36:46 by tbaghdas          #+#    #+#             */
-/*   Updated: 2025/02/03 23:40:06 by tbaghdas         ###   ########.fr       */
+/*   Updated: 2025/02/09 15:59:33 by tbaghdas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,5 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		f(lst -> content);
 		lst = lst -> next;
 	}
+	f(lst -> content);
 }
