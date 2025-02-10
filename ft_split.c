@@ -6,7 +6,7 @@
 /*   By: tbaghdas <tbaghdas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 17:06:58 by tbaghdas          #+#    #+#             */
-/*   Updated: 2025/02/09 18:34:16 by tbaghdas         ###   ########.fr       */
+/*   Updated: 2025/02/11 03:27:57 by tbaghdas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,21 +20,17 @@ static int	words_count(char const *s, char c)
 
 	i = 0;
 	count = 0;
-	flag = -1;
+	flag = 1;
 	while (s[i])
 	{
-		if (i++[s] == c && flag != -1)
-		{
-			if (!flag)
-				flag = 1;
-		}
-		else if (flag)
+		if (s[i] != c && flag)
 		{
 			count++;
 			flag = 0;
 		}
-		else
-			flag = 0;
+		else if (s[i] == c)
+			flag = 1;
+		i++;
 	}
 	return (count);
 }
@@ -46,9 +42,16 @@ static int	get_size(char const *s, char c)
 
 	i = 0;
 	count = 0;
-	while (i[s] && i++[s] != c)
+	while (s[i] && s[i++] != c)
 		++count;
 	return (count);
+}
+
+static void	free_mem(char **strs, int i)
+{
+	while (i >= 0)
+		free(strs[i--]);
+	free(strs);
 }
 
 static void	gen_strs(char **strs, char const *s, char c, int *arr)
@@ -62,20 +65,27 @@ static void	gen_strs(char **strs, char const *s, char c, int *arr)
 	{
 		if (s[i] == c || arr[1] == -1)
 		{
-			if (arr[1] == arr[0] - 1)
-				break ;
 			while (s[i] == c)
 				++i;
 			if (arr[1] != -1)
 				strs[arr[1]][k] = '\0';
+			if (++arr[1] == arr[0])
+			{
+				strs[arr[1]] = NULL;
+				return ;
+			}
 			k = 0;
-			strs[++arr[1]] = (char *) malloc(
+			strs[arr[1]] = (char *) malloc(
 					(get_size(s + i, c) + 1) * sizeof(char));
 			if (!strs[arr[1]])
-				strs = NULL;
+			{
+				free_mem(strs, arr[1] - 1);
+				return ;
+			}
 		}
 		strs[arr[1]][k++] = s[i++];
 	}
+	strs[arr[1]][k] = '\0';
 	strs[++arr[1]] = NULL;
 }
 
@@ -89,9 +99,17 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	count = words_count(s, c);
+	if (count == 0)
+	{
+		strs = (char **) malloc(sizeof(char *));
+		if (!strs)
+			return (strs);
+		strs[0] = NULL;
+		return (strs);
+	}
 	strs = (char **) malloc((count + 1) * sizeof(char *));
 	if (!strs)
-		return (NULL);
+		return (strs);
 	arr[0] = count;
 	gen_strs(strs, s, c, arr);
 	return (strs);
@@ -100,10 +118,13 @@ char	**ft_split(char const *s, char c)
 #include <stdio.h>
 
 int	main(int c, char **a)
-{}/*
+{
 	c++;
 	char **j = ft_split(a[1], a[2][0]);
 	for(int i = 0;j[i];i++){
 		printf("%s\n", j[i]);
 	}
-}*/
+	// if (j)
+	// 	free_mem(j, 10);
+}
+*/
