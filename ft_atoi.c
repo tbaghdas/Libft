@@ -6,7 +6,7 @@
 /*   By: tbaghdas <tbaghdas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 21:06:59 by tbaghdas          #+#    #+#             */
-/*   Updated: 2025/02/10 19:52:37 by tbaghdas         ###   ########.fr       */
+/*   Updated: 2025/02/11 22:48:14 by tbaghdas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ int	ft_atoi(const char *s)
 	res = 0;
 	i = 0;
 	sign = 1;
-	if (!s || s[i] < 0)
+	if (s[i] < 0)
 		return (res);
-	while (s[i] && (s[i] == 32 || (s[i] >= 9 && s[i] <= 15)))
+	while (s[i] && (s[i] == 32 || (s[i] >= 9 && s[i] <= 13)))
 		i++;
 	if (s[i] == 45 || s[i] == 43)
 	{

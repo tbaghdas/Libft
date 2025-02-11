@@ -6,7 +6,7 @@
 /*   By: tbaghdas <tbaghdas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 21:11:19 by tbaghdas          #+#    #+#             */
-/*   Updated: 2025/02/03 21:20:37 by tbaghdas         ###   ########.fr       */
+/*   Updated: 2025/02/11 22:40:19 by tbaghdas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ char	*ft_strdup(const char *src)
 	int		size;
 	char	*s;
 
-	if (!src)
-		return (NULL);
 	size = 0;
 	i = 0;
 	while (src[i++])

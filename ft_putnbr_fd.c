@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbaghdas <tbaghdas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/01 18:42:44 by tbaghdas          #+#    #+#             */
-/*   Updated: 2025/02/01 18:46:39 by tbaghdas         ###   ########.fr       */
+/*   Created: 2025/02/11 19:44:49 by tbaghdas          #+#    #+#             */
+/*   Updated: 2025/02/11 22:26:24 by tbaghdas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,29 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	ft_putstr_fd(ft_itoa(n), fd);
+	long	nb;
+	long	div;
+
+	nb = n;
+	div = 10;
+	if (nb < 0)
+	{
+		ft_putchar_fd('-', fd);
+		nb *= -1;
+	}
+	while (nb / (div * 10))
+	{
+		div *= 10;
+	}
+	while (div > 2 && nb > 9)
+	{
+		ft_putchar_fd((nb / div) % 10 + '0', fd);
+		div /= 10;
+	}
+	ft_putchar_fd((nb % 10) + '0', fd);
 }
+/*
+int main()
+{
+	ft_putnbr_fd(164189, 1);
+}*/

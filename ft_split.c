@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbaghdas <tbaghdas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/30 17:06:58 by tbaghdas          #+#    #+#             */
-/*   Updated: 2025/02/11 03:27:57 by tbaghdas         ###   ########.fr       */
+/*   Created: 2025/02/11 19:23:11 by tbaghdas          #+#    #+#             */
+/*   Updated: 2025/02/11 21:36:37 by tbaghdas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,25 +57,18 @@ static void	free_mem(char **strs, int i)
 static void	gen_strs(char **strs, char const *s, char c, int *arr)
 {
 	int		i;
-	int		k;
 
 	i = 0;
-	k = 0;
 	while (s[i] && arr[1] < arr[0])
 	{
 		if (s[i] == c || arr[1] == -1)
 		{
 			while (s[i] == c)
 				++i;
-			if (arr[1] != -1)
-				strs[arr[1]][k] = '\0';
-			if (++arr[1] == arr[0])
-			{
-				strs[arr[1]] = NULL;
-				return ;
-			}
-			k = 0;
-			strs[arr[1]] = (char *) malloc(
+			arr[2] = 0;
+			if (arr[1] + 1 == arr[0])
+				break ;
+			strs[++arr[1]] = (char *)malloc(
 					(get_size(s + i, c) + 1) * sizeof(char));
 			if (!strs[arr[1]])
 			{
@@ -83,19 +76,21 @@ static void	gen_strs(char **strs, char const *s, char c, int *arr)
 				return ;
 			}
 		}
-		strs[arr[1]][k++] = s[i++];
+		strs[arr[1]][arr[2]++] = s[i++];
+		if (arr[1] != -1 && (s[i] == c || !s[i]))
+			strs[arr[1]][arr[2]] = '\0';
 	}
-	strs[arr[1]][k] = '\0';
-	strs[++arr[1]] = NULL;
+	strs[arr[0]] = NULL;
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**strs;
 	int		count;
-	int		arr[2];
+	int		arr[3];
 
 	arr[1] = -1;
+	arr[2] = 0;
 	if (!s)
 		return (NULL);
 	count = words_count(s, c);

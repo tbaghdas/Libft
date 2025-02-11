@@ -6,7 +6,7 @@
 /*   By: tbaghdas <tbaghdas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 22:35:16 by tbaghdas          #+#    #+#             */
-/*   Updated: 2025/02/10 21:10:48 by tbaghdas         ###   ########.fr       */
+/*   Updated: 2025/02/12 00:48:37 by tbaghdas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	start_count = rem_count_start(s1, set);
 	end_count = rem_count_end(s1, set, len - 1);
 	if (start_count + end_count >= len)
-		return ("");
+		return (str = (char *)malloc(sizeof(char)), str[0] = '\0', str);
 	str = (char *) malloc((len - start_count - end_count + 1) * sizeof(char));
 	if (!str)
 		return (NULL);

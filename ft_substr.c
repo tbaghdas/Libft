@@ -6,7 +6,7 @@
 /*   By: tbaghdas <tbaghdas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 21:32:10 by tbaghdas          #+#    #+#             */
-/*   Updated: 2025/02/10 21:01:53 by tbaghdas         ###   ########.fr       */
+/*   Updated: 2025/02/12 00:21:33 by tbaghdas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 	size_t	length;
 
-	if (!s)
+	if (!s && !s[0])
 		return (NULL);
 	length = ft_strlen(s);
-	if (start + 1 > length)
-		return ("");
+	if (start >= length)
+		return (sub_s = (char *) malloc(sizeof(char)), sub_s[0] = '\0', sub_s);
 	if (start + len > length)
 		len = length - start;
 	sub_s = (char *) malloc((len + 1) * sizeof(char));

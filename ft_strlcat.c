@@ -6,7 +6,7 @@
 /*   By: tbaghdas <tbaghdas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 21:30:38 by tbaghdas          #+#    #+#             */
-/*   Updated: 2025/02/07 01:24:50 by tbaghdas         ###   ########.fr       */
+/*   Updated: 2025/02/11 22:36:40 by tbaghdas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 	size_t	len;
 
-	if (!dst || !src)
-		return (0);
 	len = ft_strlen(dst);
 	i = 0;
 	while (src[i] && len + i + 1 < dstsize)

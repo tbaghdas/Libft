@@ -6,7 +6,7 @@
 /*   By: tbaghdas <tbaghdas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 22:16:23 by tbaghdas          #+#    #+#             */
-/*   Updated: 2025/02/03 21:04:44 by tbaghdas         ###   ########.fr       */
+/*   Updated: 2025/02/11 23:03:52 by tbaghdas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,8 @@ char	*ft_strchr(const char *s, int c)
 {
 	int	i;
 
-	if (!s)
-		return (NULL);
 	i = 0;
+	c %= 128;
 	while (i[s] && i[s] != c)
 		i++;
 	if (c != i[s])
