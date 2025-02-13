@@ -6,7 +6,7 @@
 /*   By: tbaghdas <tbaghdas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 21:11:19 by tbaghdas          #+#    #+#             */
-/*   Updated: 2025/02/11 22:40:19 by tbaghdas         ###   ########.fr       */
+/*   Updated: 2025/02/13 21:30:25 by tbaghdas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,3 @@ char	*ft_strdup(const char *src)
 	i[s] = '\0';
 	return (s);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-
-int	main(int c, char *v[])
-{
-	printf("%d  : %s\n%s\n", c, ft_strdup(v[1]), strdup(v[1]));
-}
-*/

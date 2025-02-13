@@ -6,7 +6,7 @@
 /*   By: tbaghdas <tbaghdas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 22:35:16 by tbaghdas          #+#    #+#             */
-/*   Updated: 2025/02/12 00:48:37 by tbaghdas         ###   ########.fr       */
+/*   Updated: 2025/02/13 21:36:10 by tbaghdas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,8 +75,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	len = ft_strlen((char *)s1);
 	start_count = rem_count_start(s1, set);
 	end_count = rem_count_end(s1, set, len - 1);
-	if (start_count + end_count >= len)
-		return (str = (char *)malloc(sizeof(char)), str[0] = '\0', str);
+	if (start_count + end_count >= len || !s1[0])
+		return (ft_strdup(""));
 	str = (char *) malloc((len - start_count - end_count + 1) * sizeof(char));
 	if (!str)
 		return (NULL);
@@ -86,11 +86,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str[i] = '\0';
 	return (str);
 }
-/*
-#include <stdio.h>
-
-int main(int t, char *u[])
-{
-	t++;
-	printf("%s\n", ft_strtrim("lorem \n ipsum \t dolor \n sit \t amet", " "));
-}*/

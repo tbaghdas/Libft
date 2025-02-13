@@ -6,7 +6,7 @@
 #    By: tbaghdas <tbaghdas@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/04 21:03:17 by tbaghdas          #+#    #+#              #
-#    Updated: 2025/02/06 21:04:18 by tbaghdas         ###   ########.fr        #
+#    Updated: 2025/02/13 22:17:00 by tbaghdas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,10 +30,12 @@ NAME	= libft.a
 
 CFLAGS	= -Wall -Wextra -Werror
 
+%.o: %.c	$(libft.h) Makefile
+				$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
+
 all: $(NAME)
 
 $(NAME): $(OFILES)
-	$(CC) $(CFLAGS) -c $(CFILES)
 	ar rcs $(NAME) $(OFILES) 
 
 clean:

@@ -6,7 +6,7 @@
 /*   By: tbaghdas <tbaghdas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 21:07:19 by tbaghdas          #+#    #+#             */
-/*   Updated: 2025/02/12 00:42:41 by tbaghdas         ###   ########.fr       */
+/*   Updated: 2025/02/13 21:36:00 by tbaghdas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-/*
-int main()
-{
-	printf("%s\n", ft_strnstr("lorem ipsum dolor sit amet", "ipsum", 15));
-}*/

@@ -6,7 +6,7 @@
 /*   By: tbaghdas <tbaghdas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 19:23:11 by tbaghdas          #+#    #+#             */
-/*   Updated: 2025/02/11 21:36:37 by tbaghdas         ###   ########.fr       */
+/*   Updated: 2025/02/13 21:29:22 by tbaghdas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,14 +47,15 @@ static int	get_size(char const *s, char c)
 	return (count);
 }
 
-static void	free_mem(char **strs, int i)
+static int	free_mem(char **strs, int i)
 {
 	while (i >= 0)
 		free(strs[i--]);
 	free(strs);
+	return (1);
 }
 
-static void	gen_strs(char **strs, char const *s, char c, int *arr)
+static int	gen_strs(char **strs, char const *s, char c, int *arr)
 {
 	int		i;
 
@@ -71,16 +72,14 @@ static void	gen_strs(char **strs, char const *s, char c, int *arr)
 			strs[++arr[1]] = (char *)malloc(
 					(get_size(s + i, c) + 1) * sizeof(char));
 			if (!strs[arr[1]])
-			{
-				free_mem(strs, arr[1] - 1);
-				return ;
-			}
+				return (free_mem(strs, arr[1]));
 		}
 		strs[arr[1]][arr[2]++] = s[i++];
 		if (arr[1] != -1 && (s[i] == c || !s[i]))
 			strs[arr[1]][arr[2]] = '\0';
 	}
 	strs[arr[0]] = NULL;
+	return (0);
 }
 
 char	**ft_split(char const *s, char c)
@@ -98,28 +97,15 @@ char	**ft_split(char const *s, char c)
 	{
 		strs = (char **) malloc(sizeof(char *));
 		if (!strs)
-			return (strs);
+			return (NULL);
 		strs[0] = NULL;
 		return (strs);
 	}
 	strs = (char **) malloc((count + 1) * sizeof(char *));
 	if (!strs)
-		return (strs);
+		return (NULL);
 	arr[0] = count;
-	gen_strs(strs, s, c, arr);
+	if (gen_strs(strs, s, c, arr))
+		strs = NULL;
 	return (strs);
 }
-/*
-#include <stdio.h>
-
-int	main(int c, char **a)
-{
-	c++;
-	char **j = ft_split(a[1], a[2][0]);
-	for(int i = 0;j[i];i++){
-		printf("%s\n", j[i]);
-	}
-	// if (j)
-	// 	free_mem(j, 10);
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: tbaghdas <tbaghdas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 21:06:59 by tbaghdas          #+#    #+#             */
-/*   Updated: 2025/02/11 22:48:14 by tbaghdas         ###   ########.fr       */
+/*   Updated: 2025/02/13 21:16:51 by tbaghdas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,11 +57,4 @@ int	ft_atoi(const char *s)
 		res = res * 10 + s[i++] - '0';
 	return (res * sign);
 }
-
-#include <stdio.h>
-
-int main(int d, char **y)
-{
-	d++;
-	printf("%d\n",ft_atoi(y[1]));
-}*/
+*/

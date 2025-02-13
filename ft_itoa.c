@@ -6,7 +6,7 @@
 /*   By: tbaghdas <tbaghdas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 20:47:12 by tbaghdas          #+#    #+#             */
-/*   Updated: 2025/02/01 18:44:20 by tbaghdas         ###   ########.fr       */
+/*   Updated: 2025/02/13 21:21:45 by tbaghdas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,11 +49,3 @@ char	*ft_itoa(int n)
 	write_str(str, nb, count);
 	return (str);
 }
-/*
-#include <stdio.h>
-int main()
-{
-	int u;
-	scanf("%d", &u);
-	printf("%s\n%d\n", ft_itoa(u), u);
-}*/

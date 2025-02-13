@@ -6,7 +6,7 @@
 /*   By: tbaghdas <tbaghdas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 21:50:13 by tbaghdas          #+#    #+#             */
-/*   Updated: 2025/01/27 22:15:35 by tbaghdas         ###   ########.fr       */
+/*   Updated: 2025/02/13 21:35:08 by tbaghdas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str[i] = '\0';
 	return (str);
 }
-/*
-#include <stdio.h>
-
-int main (int t, char *g[])
-{
-	t++;
-	printf("%s\n", ft_strjoin(g[1], g[2]));
-}*/
